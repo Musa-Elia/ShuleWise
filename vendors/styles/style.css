@@ -43,6 +43,7 @@ html{
 }
 input[type=submit]{
     -webkit-appearance:none;
+    appearance: none;
 }
 *,:after,:before{
     -webkit-box-sizing:border-box;
@@ -1546,7 +1547,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before
 
 .brand-logo a span {
     display: block;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     margin-left: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3883,7 +3884,7 @@ body.IE .register-page-wrap .container {
     position: relative;
 }
 
-./* Admin Chat Bubble Arrow */
+/* Admin Chat Bubble Arrow */
 .chat-box .chat-desc ul li.admin_chat .chat-body p:after {
     content: "";
     width: 0;
