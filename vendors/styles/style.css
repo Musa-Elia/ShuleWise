@@ -1569,7 +1569,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before
 }
 
 /* THE SIDE-BAR */
-.left-side-bar-new{
+/* .left-side-bar-new{
     width:250px;
     height: 610px;
     border-radius: 15px;
@@ -1579,12 +1579,12 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before
     margin-top: 25px;
     margin-left: 15px;
     overflow: hidden;
-}
-.left-side-bar-new .active:before {
+} */
+.left-side-bar .active:before {
     content: "";
     width: 50px;
     height: 8px;
-    background: white;
+    background: whitesmoke;
     position: absolute;
     top: 0;
     left: 0;
@@ -1605,7 +1605,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before
     width:280px;
     height:100vh;
     z-index:1000;
-    background: white;
+    background:linear-gradient(180deg, #39b54a, #007236);
 }
 .left-side-bar .left-side-bar-new .mCS-dark-2.mCSB_scrollTools 
 .mCSB_dragger .mCSB_dragger_bar{
