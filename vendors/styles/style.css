@@ -1522,8 +1522,10 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before
 
 .brand-logo {
     width: 280px;
-    height: 70px;
+    height: 72px;
     border-bottom: 1px solid rgba(0,0,0,.1);
+    background: white;
+    box-shadow: var(--box-shadow);
 }
 
 .brand-logo a {
@@ -1567,6 +1569,29 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before
 }
 
 /* THE SIDE-BAR */
+.left-side-bar-new{
+    width:250px;
+    height: 610px;
+    border-radius: 15px;
+    z-index: index 2000;
+    background: linear-gradient(180deg, #39b54a, #007236);
+    box-shadow: 8px 12px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 25px;
+    margin-left: 15px;
+    overflow: hidden;
+}
+.left-side-bar-new .active:before {
+    content: "";
+    width: 50px;
+    height: 8px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 20px;
+    border-radius: 0 0 15px 15px;
+}
+
 .left-side-bar,
 .left-side-bar:before {
     position: fixed;
@@ -1576,13 +1601,13 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before
     transition: all .3s ease-in-out;
 }
 
-.left-side-bar{
+.left-side-bar {
     width:280px;
     height:100vh;
     z-index:1000;
-    background:linear-gradient(180deg, #39b54a, #007236);
+    background: white;
 }
-.left-side-bar .mCS-dark-2.mCSB_scrollTools 
+.left-side-bar .left-side-bar-new .mCS-dark-2.mCSB_scrollTools 
 .mCSB_dragger .mCSB_dragger_bar{
     background:#ecf0f4
 }
@@ -1595,10 +1620,10 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before
     display:none
 }
 .left-side-bar.open{
-    left:0
+    left:0;
 }
 .left-side-bar .menu-block{
-    height:calc(100vh - 70px)
+    height:calc(100vh - 100px)
 }
 .left-side-bar .close-sidebar{
     font-size:18px;
@@ -1615,7 +1640,8 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before
 .sidebar-menu .dropdown-toggle{
     display:block;
     padding:18px 15px 18px 67px;
-    font-size:16px;color:#fff;
+    font-size:16px;
+    color:#fff;
     font-weight:300;
     letter-spacing:.03em;
     position:relative;
