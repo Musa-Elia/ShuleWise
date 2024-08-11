@@ -100,7 +100,8 @@ p{
     justify-content:center;
 }
 .pre-loader .loader-logo{
-    padding-bottom:15px
+    padding-bottom:15px;
+    width:250px;
 }
 .pre-loader .loader-progress{
     height:8px;
