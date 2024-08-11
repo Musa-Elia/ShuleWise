@@ -3,23 +3,26 @@
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>ShuleWise | Sitemap</title>
+	<title>ShuleWise</title>
+
+	<!-- Site favicon -->
 
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+
 </head>
-99<body>
+<body>
 	<!-- <div class="pre-loader">
 		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="vendors/images/deskapp-logo.svg" alt=""></div>
+			<div class="loader-logo"><img src="" alt=""></div>
 			<div class='loader-progress' id="progress_div">
 				<div class='bar' id='bar1'></div>
 			</div>
@@ -30,7 +33,10 @@
 		</div>
 	</div> -->
 
+	<!-- Header -->
 	<div class="header">
+
+		<!-- Header Left(TOP) -->
 		<div class="header-left">
 			<div class="menu-icon dw dw-menu"></div>
 			<div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
@@ -71,6 +77,8 @@
 				</form>
 			</div>
 		</div>
+
+		<!-- Header Right (TOP)-->
 		<div class="header-right">
 			<div class="dashboard-setting user-notification">
 				<div class="dropdown">
@@ -126,6 +134,7 @@
 		</div>
 	</div>
 
+	<!-- Right Sidebar (SETTING)-->
 	<div class="right-sidebar">
 		<div class="sidebar-title">
 			<h3 class="weight-600 font-16 text-blue">
@@ -200,14 +209,13 @@
 			</div>
 		</div>
 	</div>
-	<!-- END OF TOP BAR -->
 
-	<!-- START OF SEDE BAR -->
+	<!-- Left Sidebar (MAIN) -->
 	<div class="left-side-bar">
 		<div class="brand-logo">
 			<a href="index.html">
-				<img src="#" alt="" class="dark-logo">
-				<img src="#" alt="" class="light-logo">
+				<img src="vendors/images/logo.png" alt="" class="dark-logo">
+				<img src="vendors/images/logo.png" alt="" class="light-logo">
 			</a>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">
 				<i class="ion-close-round"></i>
@@ -216,10 +224,146 @@
 		<div class="menu-block customscroll">
 			<div class="sidebar-menu">
 				<ul id="accordion-menu">
-					<li>
-						<a href="sitemap.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-diagram"></span><span class="mtext">Sitemap</span>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle no-arrow">
+							<span class="material-icons-sharp micon" id="m-icon">dashboard</span>
+							<span class="mtext">Dashboard</span>
 						</a>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="material-icons-sharp micon">settings</span>
+							<span class="mtext">General Setting</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="institute-profile.html">Institute Profile</a></li>
+							<li><a href="fee-particulars.html">Fee Particulars</a></li>
+							<li><a href="fee-structure.html">Fee Structure</a></li>
+							<li><a href="marks-grading.html">Marks Grading</a></li>
+							<li><a href="account.html">Account</a></li>
+							<li><a href="rules-and-regulations.html">Rules and Regulations</a></li>
+							<li><a href="theme-and-layout.html">Theme and Layout</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="material-icons-sharp micon">local_library</span>
+							<span class="mtext">Classes</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="add-class.html">Add Class</a></li>
+							<li><a href="all-classes.html">All Classes</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="material-icons-sharp micon">auto_stories</span>
+							<span class="mtext">Subjects</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="add-subject.html">Add Subject</a></li>
+							<li><a href="class-with-subject.html">Class with Subject</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="material-icons-sharp micon">person</span>
+							<span class="mtext">Students</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="add-student.html">Add Student</a></li>
+							<li><a href="all-student.html">All Students</a></li>
+							<li><a href="admission-letter.html">Admission Letter</a></li>
+							<li><a href="student-id-cards.html">Student ID cards</a></li>
+							<li><a href="promote-student.html">Promote Students/a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="material-icons-sharp micon">business_center</span>
+							<span class="mtext">Employees</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="add-employee.html">Add Employee</a></li>
+							<li><a href="all-employees.html">All Employees</a></li>
+							<li><a href="staff-id-cards.html">Staff ID cards</a></li>
+							<li><a href="job-letter.html">Job Letter/a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="material-icons-sharp micon">paid</span>
+							<span class="mtext">Payments</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="collect-fee.html">Collect Fee</a></li>
+							<li><a href="fee-slip.html">Fee Slip</a></li>
+							<li><a href="fee-report.html">Fee Report</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="material-icons-sharp micon">account_balance_wallet</span>
+							<span class="mtext">Account</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="chart-of-account.html">Chart of Account</a></li>
+							<li><a href="income-and-expense.html">Income and Expense</a></li>
+							<li><a href="account-statement.html">Account Statement</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="material-icons-sharp micon">credit_card</span>
+							<span class="mtext">Salary</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="pay-salary.html">Pay Salary</a></li>
+							<li><a href="salary-slip.html">Salary Slip</a></li>
+							<li><a href="salary-sheet.html">Salary Sheet</a></li>
+							<li><a href="salary-report.html">Salary Report</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="material-icons-sharp micon">back_hand</span>
+							<span class="mtext">Attendance</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="student-attendance.html">Mark Student Attendance</a></li>
+							<li><a href="staff-attendance.html">Mark Staff Attendance</a></li>
+							<li><a href="student-ma.html">Student Monthly Attendance</a></li>
+							<li><a href="staff-ma.html">Staff Monthly Attendance</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="material-icons-sharp micon">pending_actions</span>
+							<span class="mtext">Timetable</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="weekdays.html">Weekdays</a></li>
+							<li><a href="class-room.html">Class Rooms</a></li>
+							<li><a href="salary-sheet.html">Salary Sheet</a></li>
+							<li><a href="salary-report.html">Salary Report</a></li>
+						</ul>
+					</li>
+					
+
+
+					<li>
+						<div class="dropdown-divider"></div>
+					</li>
+					<li>
+						<div class="sidebar-small-cap">Extra</div>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon dw dw-edit-2"></span><span class="mtext">Documentation</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="introduction.html">User Manual</a></li>
+						</ul>
 					</li>
 				</ul>
 			</div>
@@ -227,173 +371,37 @@
 	</div>
 	<div class="mobile-menu-overlay"></div>
 
-	<!-- MAIN CONTAINER -->
 	<div class="main-container">
 		<div class="pd-ltr-20 xs-pd-20-10">
 			<div class="min-height-200px">
 				<div class="page-header">
 					<div class="row">
-						<div class="col-md-12 col-sm-12">
+						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>Sitemap</h4>
+								<h4>blank</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Sitemap</li>
+									<li class="breadcrumb-item active" aria-current="page">blank</li>
 								</ol>
 							</nav>
 						</div>
+						<div class="col-md-6 col-sm-12 text-right">
+							<div class="dropdown">
+								<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									January 2018
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">Export List</a>
+									<a class="dropdown-item" href="#">Policies</a>
+									<a class="dropdown-item" href="#">View Assets</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="mb-30">
-					<div class="pb-20">
-						<div class="row">
-							<div class="col-lg-3 col-md-6 col-sm-12">
-								<div class="sitemap">
-									<h5 class="h5">Dashboard</h5>
-									<ul>
-										<li><a href="dashboard.html">Dashboard</a></li>
-									</ul>
-								</div>
-								<div class="sitemap">
-									<h5 class="h5">General Setting</h5>
-									<ul>
-										<li><a href="#">Institute Profile</a></li>
-										<li><a href="#">Fee Particulars</a></li>
-										<li><a href="#">Fee Structure</a></li>
-										<li><a href="#">Rules & Regulations</a></li>
-										<li><a href="#">Marks Grading</a></li>
-										<li><a href="#">Theme & Language</a></li>
-										<li><a href="#">Account Setting</a></li>
-									</ul>
-								</div>
-								<div class="sitemap">
-									<h5 class="h5">Classes</h5>
-									<ul>
-										<li><a href="#">All Classes</a></li>
-										<li><a href="#">Add Class</a></li>
-									</ul>
-								</div>
-								<div class="sitemap">
-									<h5 class="h5">Subjects</h5>
-									<ul>
-										<li><a href="#">Class with Subjects</a></li>
-										<li><a href="#">Assign Subjects</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6 col-sm-12">
-								<div class="sitemap">
-									<h5 class="h5">Students</h5>
-									<ul>
-										<li><a href="#">All Students</a></li>
-										<li><a href="#">Add New</a></li>
-										<li><a href="#">Addmission Letter</a></li>
-										<li><a href="#">Student ID Cards</a></li>
-										<li><a href="#">Print Basic List</a></li>
-										<li><a href="#">Promote Students</a></li>
-									</ul>
-								</div>
-								<div class="sitemap">
-									<h5 class="h5">Employees</h5>
-									<ul>
-										<li><a href="#">All Employees</a></li>
-										<li><a href="#">Add New</a></li>
-										<li><a href="#">Staff ID Cards</a></li>
-										<li><a href="#">Job Letter</a></li>
-									</ul>
-								</div>
-								<div class="sitemap">
-									<h5 class="h5">Payments</h5>
-									<ul>
-										<li><a href="#">Collect Fee</a></li>
-										<li><a href="#">Fee Slip</a></li>
-										<li><a href="#">Fee Report</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6 col-sm-12">
-								<div class="sitemap">
-									<h5 class="h5">Account</h5>
-									<ul>
-										<li><a href="#">Chart of Account</a></li>
-										<li><a href="#">Add Income</a></li>
-										<li><a href="#">Add Expense</a></li>
-										<li><a href="#">Account Statement</a></li>
-									</ul>
-								</div>
-								<div class="sitemap">
-									<h5 class="h5">Salary</h5>
-									<ul>
-										<li><a href="video-player.html">Pay Salary</a></li>
-										<li><a href="login.html">Salary Slip</a></li>
-										<li><a href="forgot-password.html">Salary Sheet</a></li>
-										<li><a href="reset-password.html">Salary Report</a></li>
-									</ul>
-								</div>
-								<div class="sitemap">
-									<h5 class="h5">Attendance</h5>
-									<ul>
-										<li><a href="#">Mark Student Attendance</a></li>
-										<li><a href="#">Mark Employee Attendance</a></li>
-										<li><a href="#">Class wise Report</a></li>
-										<li><a href="#">Students Attendance Report</a></li>
-										<li><a href="#">Employees Attendance Report</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6 col-sm-12">
-								<div class="sitemap">
-									<h5 class="h5">Timetable</h5>
-									<ul>
-										<li><a href="#">Weekdays</a></li>
-										<li><a href="#">Time periods</a></li>
-										<li><a href="#">Class Rooms</a></li>
-										<li><a href="#">Create Timetable</a></li>
-										<li><a href="#">Generate for Class</a></li>
-										<li><a href="#">Generate for Teacher</a></li>
-									</ul>
-								</div>
-								<div class="sitemap">
-									<h5 class="h5">Messaging</h5>
-									<ul>
-										<li><a href="#">Compose</a></li>
-										<li><a href="#">SMS Templates</a></li>
-									</ul>
-								</div>
-								<div class="sitemap">
-									<h5 class="h5">Exams</h5>
-									<ul>
-										<li><a href="#">(CRUD)</a></li>
-										<li><a href="#">Results</a></li>
-									</ul>
-								</div>
-								<div class="sitemap">
-									<h5 class="h5">Certificates</h5>
-									<ul>
-										<li><a href="#">Leaving Certificate</a></li>
-										<li><a href="#">Character Certificate</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- <div class="row"> -->
-							<div class="col-lg-12 col-md-12 col-sm-12">
-								<div class="sitemap">
-									<h5 class="h5">Reports</h5>
-									<ul>
-										<li><a href="#">Fee collection</a></li>
-										<li><a href="#">Student Report Card</a></li>
-										<li><a href="#">Parent Info</a></li>
-										<li><a href="#">Student Monthly Attendance</a></li>
-										<li><a href="#">Staff Monthly Attendance</a></li>
-										<li><a href="#">Account</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
+				<div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
 				</div>
 			</div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
