@@ -1,141 +1,63 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.tab-wizard2');
+document.addEventListener('DOMContentLoaded', function () {
     const emailInput = document.getElementById('email');
     const usernameInput = document.getElementById('username');
-    const passwordInput = document.getElementById('password');
-    const cpasswordInput = document.getElementById('cpassword');
-    const fullnameInput = document.getElementById('fullname');
-    const genderInputs = document.getElementsByName('gender');
+    const passwordInput = document.querySelector('input[type="password"]:not(#cpassword)');
+    const confirmPasswordInput = document.getElementById('cpassword');
     
-    // Feedback elements
     const emailFeedback = document.getElementById('emailFeedback');
+    const usernameFeedback = document.getElementById('usernameFeedback');
     const passwordFeedback = document.getElementById('passwordFeedback');
+    const confirmPasswordFeedback = document.getElementById('confirmPasswordFeedback');
+    
+    const nextButton = document.querySelector('.actions .next');
 
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(String(email).toLowerCase());
-    }
+    let isEmailValid = false;
+    let isUsernameValid = false;
+    let isPasswordValid = false;
+    let isPasswordConfirmed = false;
 
-    function checkPasswordStrength(password) {
-        if (password.length > 8) {
-            return 'Strong';
-        } else if (password.length >= 6) {
-            return 'Medium';
+    emailInput.addEventListener('input', function () {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        isEmailValid = emailPattern.test(emailInput.value);
+        emailFeedback.textContent = isEmailValid ? 'Valid Email' : 'Invalid Email';
+        emailFeedback.style.color = isEmailValid ? 'green' : 'red';
+    });
+
+    usernameInput.addEventListener('input', function () {
+        const usernamePattern = /^[a-zA-Z0-9]{4,}$/;
+        isUsernameValid = usernamePattern.test(usernameInput.value);
+        usernameFeedback.textContent = isUsernameValid ? 'Valid Username' : 'Username must be at least 4 characters and alphanumeric';
+        usernameFeedback.style.color = isUsernameValid ? 'green' : 'red';
+    });
+
+    passwordInput.addEventListener('input', function () {
+        const value = passwordInput.value;
+        if (value.length < 6) {
+            passwordFeedback.textContent = 'Too short';
+            passwordFeedback.style.color = 'red';
+            isPasswordValid = false;
+        } else if (value.length >= 6 && value.length < 8) {
+            passwordFeedback.textContent = 'Weak';
+            passwordFeedback.style.color = 'orange';
+            isPasswordValid = false;
         } else {
-            return 'Weak';
+            const strongPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            isPasswordValid = strongPattern.test(value);
+            passwordFeedback.textContent = isPasswordValid ? 'Strong' : 'Medium';
+            passwordFeedback.style.color = isPasswordValid ? 'green' : 'orange';
         }
-    }
-
-    function validateSection1() {
-        let isValid = true;
-        
-        // Validate Email
-        if (emailInput.value.trim() === '') {
-            emailFeedback.textContent = 'Email should not be blank.';
-            emailFeedback.className = 'error';
-            isValid = false;
-        } else if (validateEmail(emailInput.value)) {
-            emailFeedback.textContent = 'Valid email.';
-            emailFeedback.className = 'valid';
-        } else {
-            emailFeedback.textContent = 'Please enter a valid email.';
-            emailFeedback.className = 'error';
-            isValid = false;
-        }
-
-        // Validate Username
-        if (usernameInput.value.trim() === '') {
-            usernameFeedback.textContent = 'Username should not be blank.';
-            usernameFeedback.className = 'error';
-            isValid = false;
-        }
-
-        // Validate Password
-        const passwordStrength = checkPasswordStrength(passwordInput.value);
-        if (passwordInput.value.trim() === '') {
-            passwordFeedback.textContent = 'Password should not be blank.';
-            passwordFeedback.className = 'error';
-            isValid = false;
-        } else {
-            passwordFeedback.textContent = `Password strength: ${passwordStrength}`;
-            passwordFeedback.className = passwordStrength === 'Strong' ? 'valid' : 'error';
-        }
-
-        // Validate Confirm Password
-        if (cpasswordInput.value !== passwordInput.value) {
-            confirmPasswordFeedback.textContent = 'Passwords do not match.';
-            confirmPasswordFeedback.className = 'error';
-            isValid = false;
-        }
-
-        return isValid;
-    }
-
-    function validateSection2() {
-        let isValid = true;
-        
-        // Validate Full Name
-        if (fullnameInput.value.trim() === '') {
-            fullnameFeedback.textContent = 'Full Name should not be blank.';
-            fullnameFeedback.className = 'error';
-            isValid = false;
-        }
-
-        // Validate Gender
-        const genderChecked = Array.from(genderInputs).some(input => input.checked);
-        if (!genderChecked) {
-            genderFeedback.textContent = 'Gender must be selected.';
-            genderFeedback.className = 'error';
-            isValid = false;
-        }
-
-        return isValid;
-    }
-
-    function validateForm() {
-        if (validateSection1()) {
-            // If Section 1 is valid, allow moving to Section 2
-            if (validateSection2()) {
-                // If Section 2 is valid, show success modal
-                document.getElementById('success-modal-btn').click();
-            } else {
-                alert('Please complete all required fields in Section 2.');
-            }
-        } else {
-            alert('Please correct the errors in Section 1 before proceeding.');
-        }
-    }
-
-    // Event Listener for form submission
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-        validateForm();
     });
 
-    // Additional Event Listeners for real-time validation
-    emailInput.addEventListener('input', function() {
-        validateSection1();
+    confirmPasswordInput.addEventListener('input', function () {
+        isPasswordConfirmed = confirmPasswordInput.value === passwordInput.value;
+        confirmPasswordFeedback.textContent = isPasswordConfirmed ? 'Passwords match' : 'Passwords do not match';
+        confirmPasswordFeedback.style.color = isPasswordConfirmed ? 'green' : 'red';
     });
 
-    passwordInput.addEventListener('input', function() {
-        validateSection1();
-    });
-
-    cpasswordInput.addEventListener('input', function() {
-        validateSection1();
-    });
-
-    usernameInput.addEventListener('input', function() {
-        validateSection1();
-    });
-
-    fullnameInput.addEventListener('input', function() {
-        validateSection2();
-    });
-
-    genderInputs.forEach(input => {
-        input.addEventListener('change', function() {
-            validateSection2();
-        });
+    nextButton.addEventListener('click', function (event) {
+        if (!isEmailValid || !isUsernameValid || !isPasswordValid || !isPasswordConfirmed) {
+            event.preventDefault();
+            alert('Please fix the errors before proceeding to the next step.');
+        }
     });
 });
