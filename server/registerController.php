@@ -9,7 +9,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         $cpassword = mysqli_real_escape_string($connection, $_POST['cpassword']);
         // section 2 data 
         $fullname = mysqli_real_escape_string($connection, $_POST['fullname']);
-        $
+        $gender = mysqli_real_escape_string($connection, $_POST['gender']);
+        $city = mysqli_real_escape_string($connection, $_POST['city']);
+        $phone = mysqli_real_escape_string($connection, $_POST['phone']);
+
+        // validation 
+        
+
 
 
     }else{
