@@ -1,16 +1,14 @@
 <?php 
-$host = "localhost";
+$db_host = "localhost";
 $db_user = "root";
 $db_password = "root";
 $db_name = "shulewise";
 
 $connection = mysqli_connect($host, $db_user, $db_password, $db_name);
 
-if(!$connection){
-   die();
+if(mysqli_connect_errno()){
+    echo "connection failed" . mysqli_connect_error();
 }
-
-
 
 
 ?>
