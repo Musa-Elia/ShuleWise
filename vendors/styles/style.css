@@ -4074,8 +4074,40 @@ body.IE .register-page-wrap .container {
 }
 
 /* Widget Styles */
+.widget-icon {
+    color: #ffffff;
+    background: #007236;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.widget-icon span.material-icons-sharp {
+    font-size: 38px; /* Adjust the icon size as needed */
+}
+.widget-bg-red{
+    background: #f06e5f;
+}
+.widget-bg-green{
+    background: #7cc576;
+}
+.widget-bg-purple{
+    background: #7380ec;
+}
+.widget-bg-orange{
+    background: #ffbb55;
+}
 .widget-style1 {
     padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .widget-style1 .widget-data {
