@@ -67,7 +67,7 @@
 							  unset($_SESSION['status']); 
 						  }
 						  ?>
-						<form action="/server/loginController.php" method="POST">
+						<form action="server/loginController.php" method="POST">
 							<div class="select-role">
 								<div class="btn-group btn-group-toggle" data-toggle="buttons">
 									<label class="btn active">
@@ -85,13 +85,13 @@
 								</div>
 							</div>
 							<div class="input-group custom">
-								<input type="text" class="form-control form-control-lg" placeholder="Username">
+								<input type="email" name="email"  class="form-control form-control-lg" placeholder="example@gmail.com">
 								<div class="input-group-append custom">
 									<span class="input-group-text"><i class="icon-copy dw dw-user1"></i></span>
 								</div>
 							</div>
 							<div class="input-group custom">
-								<input type="password" class="form-control form-control-lg" placeholder="**********">
+								<input type="password" name="password" class="form-control form-control-lg" placeholder="**********">
 								<div class="input-group-append custom">
 									<span class="input-group-text"><i class="dw dw-padlock1"></i></span>
 								</div>
