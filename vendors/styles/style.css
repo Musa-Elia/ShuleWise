@@ -3167,7 +3167,7 @@ body.IE .register-page-wrap .container {
 }
 
 .pricing-card .pricing-icon img {
-    margin-top: -30px;
+    margin-top: 20px;
 }
 
 .pricing-card .price-title {
@@ -3179,7 +3179,7 @@ body.IE .register-page-wrap .container {
 }
 
 .pricing-card .pricing-price {
-    font-size: 60px;
+    font-size: 38px;
     line-height: 1;
     font-weight: 400;
     padding-bottom: 40px;
@@ -3188,13 +3188,13 @@ body.IE .register-page-wrap .container {
 }
 
 .pricing-card .pricing-price sub {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #fd486e;
 }
 
 .pricing-card .pricing-price sup {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
     color: #fd486e;
     top: 10px;
@@ -3212,10 +3212,10 @@ body.IE .register-page-wrap .container {
     transform: translate(0,50%);
 }
 
-.pricing-card .cta .btn {
+/* .pricing-card .cta .btn {
     display: block;
     text-align: center;
-}
+} */
 
 /* Pricing Card Style 2 */
 .pricing-card-style2,
