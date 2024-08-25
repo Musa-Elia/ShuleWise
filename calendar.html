@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Date Widget</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .date-widget {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            max-width: 250px;
+            margin: 20px auto;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .date-widget .time {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .date-widget .date {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="date-widget" class="date-widget">
+            <div class="time"></div>
+            <div class="date"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+    <script>
+        function updateDateTime() {
+            const now = moment().tz('Africa/Dar_es_Salaam');
+            const timeStr = now.format('HH:mm:ss');
+            const dateStr = now.format('dddd, MMMM Do YYYY');
+
+            $('#date-widget .time').text(timeStr);
+            $('#date-widget .date').text(dateStr);
+        }
+
+        // Initial update
+        updateDateTime();
+
+        // Update every second
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+</html>
