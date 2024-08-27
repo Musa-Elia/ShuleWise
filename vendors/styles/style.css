@@ -4695,6 +4695,15 @@ body.IE .register-page-wrap .container {
   .calendar-dates li:not(.active):hover::before {
     background: #e4e1e1;
   }
+  .calendar-events {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    background: #dbffec;
+    padding: 20px;
+    border-radius: 15px;
+}
+  
   /* Statistics Chart */
   div .mychart {
     height: 40vh;
