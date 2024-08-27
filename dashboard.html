@@ -409,7 +409,10 @@
 							<h4 class="font-20 weight-500 mb-10 text-capitalize">
 								Welcome back <div class="weight-600 font-30 text-green">Tamim Rashid!</div>
 							</h4>
-							<p class="font-18 max-width-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde hic non repellendus debitis iure, doloremque assumenda. Autem modi, corrupti, nobis ea iure fugiat, veniam non quaerat mollitia animi error corporis.</p>
+							<p class="font-18 max-width-600">
+								Your Account is not Verified yet!
+								Please Verify your email address. <a href="">Click here to verify!</a>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -533,15 +536,23 @@
 								</div>
 							</div>							
 						</div>
+						<!-- Bulk sms Advert -->
 						<div class="card-box height-100-p pd-20 mb-3">
-							<h2 class="h4 mb-20">Bulk messaging AD</h2>
-							<div id="chart4"></div>
+							<a href="smsSettings.php" class="w-100">
+								<div class="ms-container order-card bg-m-dblue w-100">
+									<img src="assets/images/msg1.png" alt="SMS Gateway">
+									<h6 class="m-b-5">Free SMS Gateway</h6>
+									<p style="color:silver; font-size:12px;">
+										Send Unlimited Free SMS<br>on Mobile Numbers.
+									</p>
+								</div>  
+							</a>
 						</div>
 						<div class="card-box heigh-100-p pd-20 mb-3">
 							<div class="card-block">
 								<p style="line-height:5px; color:#777;">
 									Today Present Students
-									<b class="f-right m-blue1 text-end">0%</b>
+									<b class="f-right m-blue1 text-end">50%</b>
 								</p>
 								<div class="progress" style="height:5px;">
 									<div class="progress-bar bg-m-blue1" role="progressbar" aria-valuenow="50" aria-valuemin="50" aria-valuemax="100" style="width:50%;"></div>
@@ -549,10 +560,10 @@
 							
 								<p style="margin-top:20px; line-height:5px; color:#777;">
 									Today Present Employees
-									<b class="f-right m-orange">0%</b>
+									<b class="f-right m-orange">90%</b>
 								</p>
 								<div class="progress" style="height:5px;">
-									<div class="progress-bar bg-m-orange" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div>
+									<div class="progress-bar bg-m-orange" role="progressbar" aria-valuenow="90" aria-valuemin="90" aria-valuemax="100" style="width:90%;"></div>
 								</div>
 							
 								<p style="margin-top:20px; line-height:5px; color:#777;">
@@ -566,8 +577,28 @@
 						</div>
 						
 						<div class="card-box height-150-p pd-20 mb-3">
-							<h2 class="h4 mb-20">Calendar</h2>
-							<div id="chart4"></div>
+							<!-- <div class="calendar-container"> -->
+								<header class="calendar-header">
+									<p class="calendar-current-date"></p>
+									<div class="calendar-navigation">
+										<span class="material-icons-sharp micon">chevron_left</span>
+              							<span class="material-icons-sharp micon">chevron_right</span>
+									</div>
+								</header>
+						
+								<div class="calendar-body">
+									<ul class="calendar-weekdays">
+										<li>Sun</li>
+										<li>Mon</li>
+										<li>Tue</li>
+										<li>Wed</li>
+										<li>Thu</li>
+										<li>Fri</li>
+										<li>Sat</li>
+									</ul>
+									<ul class="calendar-dates"></ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -587,6 +618,7 @@
 	</div>
 	<!-- js -->
 	<script src="vendors/scripts/core.js"></script>
+	<script src="calendar.js"></script>
 	<script src="vendors/scripts/script.min.js"></script>
 	<script src="vendors/scripts/process.js"></script>
 	<script src="vendors/scripts/layout-settings.js"></script>
