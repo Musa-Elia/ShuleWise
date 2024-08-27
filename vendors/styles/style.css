@@ -4588,12 +4588,12 @@ body.IE .register-page-wrap .container {
 }
 
 /* CALENDAR */
-.calendar-container {
+/* .calendar-container {
     background: #fff;
     width: 450px;
     border-radius: 10px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  }
+  } */
   
   .calendar-container header {
     display: flex;
@@ -4644,7 +4644,7 @@ body.IE .register-page-wrap .container {
   }
   
   .calendar-body .calendar-dates {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .calendar-body li {
@@ -4659,7 +4659,7 @@ body.IE .register-page-wrap .container {
   }
   
   .calendar-body .calendar-dates li {
-    margin-top: 30px;
+    margin-top: 10px;
     position: relative;
     z-index: 1;
     cursor: pointer;
@@ -4686,10 +4686,15 @@ body.IE .register-page-wrap .container {
   }
   
   .calendar-dates li.active::before {
-    background: #6332c5;
+    background: var(--color-secondary-variant);
   }
   
   .calendar-dates li:not(.active):hover::before {
     background: #e4e1e1;
   }
+  /* Statistics Chart */
+  div .mychart {
+    height: 40vh;
+    width: 50vw;
+}
   

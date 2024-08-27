@@ -18,7 +18,8 @@
 	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
-
+	<!-- Chart CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 	<div class="pre-loader">
@@ -477,7 +478,16 @@
 					<div class="d-flex flex-column col-xl-8 mb-30">
 						<div class="card-box height-100-p pd-20 mb-3"> <!-- Added mb-3 for spacing between cards -->
 							<h2 class="h4 mb-20">Statistics</h2>
-							<div id="chart4"></div>
+							<div class="mychart">
+								<!-- 
+									Create a canvas element
+									to render the chart 
+								-->
+								<canvas id="mixedChart"
+										width="400"
+										height="200">
+								</canvas>
+							</div>
 						</div>
 						<div class="card-box height-100-p pd-20 mb-3">
 							<h2 class="h4 mb-20">Today absent students</h2>
@@ -617,6 +627,7 @@
 		</div>
 	</div>
 	<!-- js -->
+	<script src="mychart.js"></script>
 	<script src="vendors/scripts/core.js"></script>
 	<script src="calendar.js"></script>
 	<script src="vendors/scripts/script.min.js"></script>
