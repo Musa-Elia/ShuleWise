@@ -13,13 +13,13 @@
             data: {
                 // Labels for the X-axis
                 labels: 
-                ['January', 'February', 'March', 'April', 'May'],
+                ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 // Datasets for the chart
                 datasets: [{
                     //Chart type
                     type: 'bar', 
                     // Label for the dataset
-                    label: 'Pizza bar chart', 
+                    label: 'Income', 
                     // Data points for the Y-axis
                     data: [122, 77, 45, 104, 66], 
                     // Background color for the bars
@@ -30,39 +30,41 @@
                     'rgba(215, 153, 20, 1)', 
                     // Border width for the bars
                     borderWidth: 1 
-                }, {
-                    type: 'line',
-                    label: 'Pizza line chart',
-                    data: [122, 77, 45, 104, 66],
-                    borderColor: 
-                    'rgba(215, 153, 20, 1)',
-                }, {
+                }, //{
+                    // type: 'line',
+                    // label: 'Pizza line chart',
+                    // data: [122, 77, 45, 104, 66],
+                    // borderColor: 
+                    // 'rgba(215, 153, 20, 1)',
+                //}, 
+                {
                     type: 'bar', 
-                    label: 'Burger bar chart', 
+                    label: 'Expense', 
                     data: [87, 133, 87, 66, 84], 
                     backgroundColor: 
                     'rgba(75, 192, 192, 0.5)',
                     borderColor: 
                     'rgba(75, 192, 192, 1)', 
                     borderWidth: 1
-                }, {
-                    type: 'line',
-                    label: 'Burger line chart',
-                    data: [87, 133, 87, 66, 84],
-                    borderColor: 
-                    'rgba(75, 192, 192, 1)',
-                }]
+                }, //{
+                    // type: 'line',
+                    // label: 'Burger line chart',
+                    // data: [87, 133, 87, 66, 84],
+                    // borderColor: 
+                    // 'rgba(75, 192, 192, 1)',
+                //}
+                ]
             },
             options: {
                 // It makes the chart responsive
                 responsive: true, 
                 // This plugin will display Title of chart
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 
-                'Monthly Revenue and Statistics'
-                    }
-                }
+                // plugins: {
+                //     title: {
+                //         display: true,
+                //         text: 
+                // 'Monthly Revenue VS  Expenses'
+                //     }
+                // }
             }
         });
