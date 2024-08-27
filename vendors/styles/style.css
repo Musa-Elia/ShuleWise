@@ -4630,10 +4630,13 @@ body.IE .register-page-wrap .container {
   header .calendar-current-date {
     font-weight: 500;
     font-size: 1.45rem;
+    margin-right: auto;
   }
-  
+  .material-icons-sharp .micon-nav{
+    margin-left: 20px;
+  }
   .calendar-body {
-    padding: 20px;
+    padding: 2px;
   }
   
   .calendar-body ul {
