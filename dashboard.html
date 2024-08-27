@@ -473,20 +473,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="d-flex justify-content-between">
+				<div class="d-flex flex-column flex-xl-row">
 					<!-- Main Column (Left) -->
-					<div class="d-flex flex-column col-xl-8 mb-30">
-						<div class="card-box height-100-p pd-20 mb-3"> <!-- Added mb-3 for spacing between cards -->
+					<div class="order-1 order-xl-1 d-flex flex-column col-xl-8 mb-30">
+						<div class="card-box height-100-p pd-20 mb-3">
 							<h2 class="h4 mb-20">Statistics</h2>
 							<div class="mychart">
-								<!-- 
-									Create a canvas element
-									to render the chart 
-								-->
-								<canvas id="mixedChart"
-										width="400"
-										height="200">
-								</canvas>
+								<canvas id="mixedChart" width="400" height="200"></canvas>
 							</div>
 						</div>
 						<div class="card-box height-100-p pd-20 mb-3">
@@ -513,18 +506,10 @@
 					</div>
 					
 					<!-- Side Column (Right) -->
-					<div class="d-flex flex-column col-xl-4 mb-30">
+					<div class="order-2 order-xl-2 d-flex flex-column col-xl-4 mb-30>
 						<div class="card-box pricing-card height-100-p pd-20 mb-3">
 							<h2 class="h4 mb-20">Fee Collection This Year</h2>
 							<div class="card-block">
-								<div style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor">
-									<div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-										<div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-									</div>
-									<div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-										<div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-									</div>
-								</div>
 								<p class="text-center m-orange m-b-0">
 									<i class="ti-target m-r-5"></i>Target
 								</p>
@@ -544,9 +529,9 @@
 										</p>
 									</div>
 								</div>
-							</div>							
+							</div>
 						</div>
-						<!-- Bulk sms Advert -->
+						<!-- Bulk SMS Advert -->
 						<div class="card-box height-100-p pd-20 mb-3">
 							<a href="smsSettings.php" class="w-100">
 								<div class="ms-container order-card bg-m-dblue w-100">
@@ -558,7 +543,7 @@
 								</div>  
 							</a>
 						</div>
-						<div class="card-box heigh-100-p pd-20 mb-3">
+						<div class="card-box height-100-p pd-20 mb-3">
 							<div class="card-block">
 								<p style="line-height:5px; color:#777;">
 									Today Present Students
@@ -567,7 +552,6 @@
 								<div class="progress" style="height:5px;">
 									<div class="progress-bar bg-m-blue1" role="progressbar" aria-valuenow="50" aria-valuemin="50" aria-valuemax="100" style="width:50%;"></div>
 								</div>
-							
 								<p style="margin-top:20px; line-height:5px; color:#777;">
 									Today Present Employees
 									<b class="f-right m-orange">90%</b>
@@ -575,7 +559,6 @@
 								<div class="progress" style="height:5px;">
 									<div class="progress-bar bg-m-orange" role="progressbar" aria-valuenow="90" aria-valuemin="90" aria-valuemax="100" style="width:90%;"></div>
 								</div>
-							
 								<p style="margin-top:20px; line-height:5px; color:#777;">
 									This Month Fee Collection
 									<b class="f-right m-blue1">0%</b>
@@ -585,40 +568,31 @@
 								</div>
 							</div>
 						</div>
-						
 						<div class="card-box height-150-p pd-20 mb-3">
-							<!-- <div class="calendar-container"> -->
-								<header class="calendar-header">
-									<p class="calendar-current-date"></p>
-									<div class="calendar-navigation">
-										<span class="material-icons-sharp micon">chevron_left</span>
-              							<span class="material-icons-sharp micon">chevron_right</span>
-									</div>
-								</header>
-						
-								<div class="calendar-body">
-									<ul class="calendar-weekdays">
-										<li>Sun</li>
-										<li>Mon</li>
-										<li>Tue</li>
-										<li>Wed</li>
-										<li>Thu</li>
-										<li>Fri</li>
-										<li>Sat</li>
-									</ul>
-									<ul class="calendar-dates"></ul>
+							<header class="calendar-header">
+								<p class="calendar-current-date"></p>
+								<div class="calendar-navigation">
+									<span class="material-icons-sharp micon">chevron_left</span>
+									<span class="material-icons-sharp micon">chevron_right</span>
 								</div>
+							</header>
+							<div class="calendar-body">
+								<ul class="calendar-weekdays">
+									<li>Sun</li>
+									<li>Mon</li>
+									<li>Tue</li>
+									<li>Wed</li>
+									<li>Thu</li>
+									<li>Fri</li>
+									<li>Sat</li>
+								</ul>
+								<ul class="calendar-dates"></ul>
 							</div>
 						</div>
 					</div>
 				</div>
 				
 			</div>
-
-
-
-
-
 
 			<!-- Footer -->
 			<div class="footer-wrap pd-20 mb-20 card-box">
