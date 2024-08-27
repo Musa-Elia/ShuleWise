@@ -4700,4 +4700,29 @@ body.IE .register-page-wrap .container {
     height: 40vh;
     width: 50vw;
 }
-  
+
+/* ONSCROLL ANIMATION - DASHBOARD */
+.card-box {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Reveal class to make content visible */
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Additional classes for staggered animations */
+.reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.3s;
+}

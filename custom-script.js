@@ -113,3 +113,32 @@ prenexIcons.forEach(icon => {
         manipulate();
     });
 });
+
+
+// ON SCROLL ANIMATION
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+    );
+}
+
+// Function to add the reveal class when elements come into view
+function revealOnScroll() {
+    const elements = document.querySelectorAll('.card-box');
+
+    elements.forEach((element, index) => {
+        if (isInViewport(element)) {
+            element.classList.add('reveal', `reveal-delay-${index}`);
+        }
+    });
+}
+
+// Attach the function to the scroll event
+window.addEventListener('scroll', revealOnScroll);
+
+// Trigger the function on page load to check the initial visibility
+revealOnScroll();
+
